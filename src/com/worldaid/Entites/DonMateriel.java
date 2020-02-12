@@ -21,6 +21,7 @@ public class DonMateriel {
     int id_benevole;
     Date date_don;
     public String type_Materiel;
+    
 
     public DonMateriel(java.sql.Date date, String type_Materiel, int id_benevole, int id_association, int id_evenement) {
         this.date_don=date;

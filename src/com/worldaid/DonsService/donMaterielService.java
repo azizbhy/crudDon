@@ -84,6 +84,17 @@ public class donMaterielService implements IService<DonMateriel> {
     return arr;
     }
 
+    @Override
+    public void count(DonMateriel t) throws SQLException {
+         Statement s = con.createStatement();
+         ResultSet r = s.executeQuery("SELECT COUNT(*) AS rowcount FROM don_materiel where type_materiel='Vetements'");
+         r.next();
+         int count = r.getInt("rowcount") ;
+         r.close() ;
+          System.out.println("J'ai  " + count + " dons materiels de vetements.");
+
+    }
+
     
 }
 

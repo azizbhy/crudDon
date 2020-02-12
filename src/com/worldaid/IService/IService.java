@@ -19,5 +19,6 @@ public interface IService<T> {
     void ajouter(T t) throws SQLException;
     public void delete(T t) throws SQLException;
     public void update(T t) throws SQLException;
+    public void count(T t) throws SQLException;
     List<T> readAll() throws SQLException;
 }

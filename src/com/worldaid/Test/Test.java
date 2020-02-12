@@ -29,7 +29,7 @@ public class Test {
     try{
         java.util.Date d = new java.util.Date(); //Importer date courante d
         java.sql.Date date = new java.sql.Date(d.getTime());  
-        DonMateriel dm = new DonMateriel(date,"Vetements",5,2,3); //Création d'un nouveau objet DonMateriel
+        DonMateriel dm = new DonMateriel(date,"Hebergements",5,2,3); //Création d'un nouveau objet DonMateriel
         DonFinancier df = new DonFinancier(1,2,3,date,12.47); //Création d'un nouveau objet DonFinancier                                                      //Création d'un nouveau objet Don
        
          // Test du crud Don Materiel : 
@@ -44,6 +44,7 @@ public class Test {
             System.out.println("Affichage : ");
             List<DonMateriel> listDonMateriel = ser.readAll();
             System.out.println(listDonMateriel);
+            ser.count(dm);
             System.out.println("\n");
            
             
@@ -63,6 +64,7 @@ public class Test {
             System.out.println(listDonFinancier);
             System.out.println("Recherche by id : ");
             ser1.searchById(1);
+            
        
         
      }catch (SQLException ex) {
